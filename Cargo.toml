@@ -1,0 +1,9 @@
+[package]
+name = "curator"
+version = "0.1.0"
+authors = ["Anthony Defranceschi <chaacygg@gmail.com>"]
+
+[dependencies]
+
+rand = "0.3"
+clap = "2.16"
