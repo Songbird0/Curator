@@ -1,5 +1,5 @@
 /*
-    Generate some strong passwords.
+    Generates some strong passwords.
     Copyright (C) 2017  Anthony Defranceschi
 
     This program is free software: you can redistribute it and/or modify
@@ -41,10 +41,10 @@ const DESCRIPTION : &'static str = r"
     under certain conditions; type `show c' for details.
 -----------
 
-Generate some strong passwords.
+Generates some strong passwords.
 Using:
-curator -i -uc -lc -n 20
-Prints: <put a password here>";
+curator -i -uc -lc -s -n 20
+Prints: L#;d8Y0E32";
 
 fn main() {
     let app = App::new("Curator");

@@ -7,3 +7,23 @@ authors = ["Anthony Defranceschi <chaacygg@gmail.com>"]
 
 rand = "0.3"
 clap = "2.16"
+
+[[bin]]
+
+name = "sa_curator"
+
+path = "src/main.rs"
+
+test = true
+
+doctest = true
+
+bench = true
+
+doc = true
+
+plugin = false
+
+proc-macro = false
+
+harness = true
