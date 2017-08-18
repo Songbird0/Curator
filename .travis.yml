@@ -1,0 +1,16 @@
+language: rust
+rust:
+  - stable
+  - beta
+  - nightly
+matrix:
+  allow_failures:
+    - rust: nightly
+script:
+  - cargo -V
+  - rustc -V
+  - RUST_BACKTRACE=1 cargo build --verbose --all
+  - RUST_BACKTRACE=1 cargo test --verbose --all
+notifications:
+  on_success: never
+  on_failure: always
