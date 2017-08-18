@@ -1,5 +1,5 @@
 /*
-    Generate some strong passwords.
+    Generates some strong passwords.
     Copyright (C) 2017  Anthony Defranceschi
 
     This program is free software: you can redistribute it and/or modify
@@ -131,8 +131,15 @@ impl Curator {
     }
 
     /// Generates a number of passwords thanks to `pwd_number` parameter.
-    pub fn gen_all_pwd(&self, occurrences: usize, pwd_number: usize) -> String {
-        "".to_owned()
+    ///
+    /// If you want to generate a single password, please use [`Curator::gen_pwd`] instead.
+    /// [`Curator::gen_pwd`]: ./struct.Curator.html#method.gen_pwd
+    pub fn gen_all_pwd(&mut self, occurrences: usize, pwd_number: usize) -> Vec<String> {
+        let mut passwords_list: Vec<String> = Vec::with_capacity(pwd_number);
+        for _ in 0..pwd_number {
+            passwords_list.push(self.gen_pwd(occurrences));
+        }
+        passwords_list
     }
 }
 
