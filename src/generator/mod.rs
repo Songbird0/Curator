@@ -46,14 +46,14 @@ impl Curator {
     /// Initializes Curator's flags to `None` (by default) and creates an `OsRng`.
     ///
     /// Returns an `Err` if `OsRng::new()` fails.
-    pub fn new() -> io::Result<Curator>{
+    pub fn new() -> io::Result<Curator> {
         let randomizer = os::OsRng::new()?;
         Ok(Curator {
             integer: None,
             lc: None,
             uc: None,
             spec: None,
-            random: randomizer
+            random: randomizer,
         })
     }
 

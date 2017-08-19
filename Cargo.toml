@@ -1,6 +1,6 @@
 [package]
 name = "curator"
-version = "0.1.0"
+version = "1.0.0"
 authors = ["Anthony Defranceschi <chaacygg@gmail.com>"]
 
 [dependencies]
@@ -8,11 +8,11 @@ authors = ["Anthony Defranceschi <chaacygg@gmail.com>"]
 rand = "0.3"
 clap = "2.16"
 
-[[bin]]
+[lib]
 
-name = "sa_curator"
+name = "c_curator"
 
-path = "src/main.rs"
+path = "src/lib.rs"
 
 test = true
 
