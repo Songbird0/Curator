@@ -31,7 +31,7 @@ extern crate clap;
 use clap::{App, Arg, SubCommand, AppSettings};
 pub mod generator;
 
-const CURATOR_VERSION: &'static str = "0.1.0";
+const CURATOR_VERSION: &'static str = "1.0.0";
 const AUTHOR: &'static str = "Anthony Defranceschi <chaacygg[at]gmail[dot]com>";
 const DESCRIPTION: &'static str = r"
     Curator  Copyright (C) 2017  Anthony Defranceschi
