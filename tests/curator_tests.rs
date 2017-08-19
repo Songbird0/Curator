@@ -1,6 +1,6 @@
-extern crate curator;
+extern crate c_curator;
 
-use curator::generator;
+use c_curator::generator;
 
 
 #[test]
@@ -9,7 +9,7 @@ use curator::generator;
 fn pwd_gen_0_flag() {
     let mut cur: generator::Curator = match generator::Curator::new() {
         Ok(res) => res,
-        Err(err) => panic!("Something went wrong: {}", err)
+        Err(err) => panic!("Something went wrong: {}", err),
     };
     let pwd: String = cur.gen_pwd(10);
     println!("password: {}", &pwd);
@@ -21,7 +21,7 @@ fn pwd_gen_0_flag() {
 fn pwd_gen_1_flag() {
     let mut cur: generator::Curator = match generator::Curator::new() {
         Ok(res) => res,
-        Err(err) => panic!("Something went wrong: {}", err)
+        Err(err) => panic!("Something went wrong: {}", err),
     };
     cur.enable_integer();
     let pwd: String = cur.gen_pwd(10);
@@ -34,7 +34,7 @@ fn pwd_gen_1_flag() {
 fn pwd_gen_2_flags() {
     let mut cur: generator::Curator = match generator::Curator::new() {
         Ok(res) => res,
-        Err(err) => panic!("Something went wrong: {}", err)
+        Err(err) => panic!("Something went wrong: {}", err),
     };
     cur.enable_integer().enable_lc();
     let pwd: String = cur.gen_pwd(10);
@@ -47,7 +47,7 @@ fn pwd_gen_2_flags() {
 fn pwd_gen_3_flags() {
     let mut cur: generator::Curator = match generator::Curator::new() {
         Ok(res) => res,
-        Err(err) => panic!("Something went wrong: {}", err)
+        Err(err) => panic!("Something went wrong: {}", err),
     };
     cur.enable_integer().enable_lc().enable_uc();
     let pwd: String = cur.gen_pwd(10);
@@ -60,7 +60,7 @@ fn pwd_gen_3_flags() {
 fn pwd_gen_4_flags() {
     let mut cur: generator::Curator = match generator::Curator::new() {
         Ok(res) => res,
-        Err(err) => panic!("Something went wrong: {}", err)
+        Err(err) => panic!("Something went wrong: {}", err),
     };
     cur.enable_integer().enable_lc().enable_uc().enable_spec();
     let pwd: String = cur.gen_pwd(10);
@@ -73,7 +73,7 @@ fn pwd_gen_4_flags() {
 fn _1_pwd_gen_4_flags() {
     let mut cur: generator::Curator = match generator::Curator::new() {
         Ok(res) => res,
-        Err(err) => panic!("Something went wrong: {}", err)
+        Err(err) => panic!("Something went wrong: {}", err),
     };
     cur.enable_integer().enable_lc().enable_uc().enable_spec();
     let pwd: Vec<String> = cur.gen_all_pwd(10, 1); //overkill, isn't it?
@@ -87,7 +87,7 @@ fn _1_pwd_gen_4_flags() {
 fn _2_pwd_gen_0_flag() {
     let mut cur: generator::Curator = match generator::Curator::new() {
         Ok(res) => res,
-        Err(err) => panic!("Something went wrong: {}", err)
+        Err(err) => panic!("Something went wrong: {}", err),
     };
     let pwd: Vec<String> = cur.gen_all_pwd(10, 2);
     println!("passwords: {:?}", &pwd);
@@ -100,7 +100,7 @@ fn _2_pwd_gen_0_flag() {
 fn _2_pwd_gen_1_flag() {
     let mut cur: generator::Curator = match generator::Curator::new() {
         Ok(res) => res,
-        Err(err) => panic!("Something went wrong: {}", err)
+        Err(err) => panic!("Something went wrong: {}", err),
     };
     cur.enable_integer();
     let pwd: Vec<String> = cur.gen_all_pwd(10, 2);
@@ -114,7 +114,7 @@ fn _2_pwd_gen_1_flag() {
 fn _2_pwd_gen_2_flag() {
     let mut cur: generator::Curator = match generator::Curator::new() {
         Ok(res) => res,
-        Err(err) => panic!("Something went wrong: {}", err)
+        Err(err) => panic!("Something went wrong: {}", err),
     };
     cur.enable_integer().enable_lc();
     let pwd: Vec<String> = cur.gen_all_pwd(10, 2);
@@ -128,7 +128,7 @@ fn _2_pwd_gen_2_flag() {
 fn _2_pwd_gen_3_flag() {
     let mut cur: generator::Curator = match generator::Curator::new() {
         Ok(res) => res,
-        Err(err) => panic!("Something went wrong: {}", err)
+        Err(err) => panic!("Something went wrong: {}", err),
     };
     cur.enable_integer().enable_lc().enable_uc();
     let pwd: Vec<String> = cur.gen_all_pwd(10, 2);
@@ -142,7 +142,7 @@ fn _2_pwd_gen_3_flag() {
 fn _2_pwd_gen_4_flag() {
     let mut cur: generator::Curator = match generator::Curator::new() {
         Ok(res) => res,
-        Err(err) => panic!("Something went wrong: {}", err)
+        Err(err) => panic!("Something went wrong: {}", err),
     };
     cur.enable_integer().enable_lc().enable_spec();
     let pwd: Vec<String> = cur.gen_all_pwd(10, 2);
