@@ -95,7 +95,7 @@ impl Curator {
 
     /// Generates a single password.
     pub fn gen_pwd(&mut self, occcurrences: usize) -> String {
-        let mut enabled_flags: Vec<&Vec<char>> = Vec::with_capacity(3); // max 3
+        let mut enabled_flags: Vec<&Vec<char>> = Vec::with_capacity(4); // max 4
         let mut one_flag_at_least: bool = false;
         // The following characters will be randomly picked at generation-time.
         if let Some(ref int_flag) = self.integer {
